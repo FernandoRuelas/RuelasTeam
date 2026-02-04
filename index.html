@@ -172,7 +172,7 @@
         <v-app-bar app class="minimal-navbar" elevation="0" height="70">
           <v-container class="d-flex align-center">
             <div class="d-flex align-center">
-               <img src="./assets/imgs/FRLogo.png" height="50" width="70">
+              <img src="./assets/imgs/FRLogo.png" height="50" width="70" />
               <!-- <div
                 style="
                   width: 40px;
@@ -235,8 +235,47 @@
                 >Contacto</a
               >
             </div>
+            <!-- Mobile Menu Button -->
+            <v-btn icon class="d-md-none" @click="drawer = !drawer" style="margin-left: 8px">
+              <v-icon>mdi-menu</v-icon>
+            </v-btn>
           </v-container>
         </v-app-bar>
+
+        <v-navigation-drawer
+          v-model="drawer"
+          temporary
+          location="right"
+          class="minimal-navbar"
+          style="background: rgba(10, 10, 10, 0.98) !important; backdrop-filter: blur(20px)"
+        >
+          <v-list style="padding-top: 60px">
+            <v-list-item v-for="item in menuItems" :key="item.title" :href="item.link" @click="drawer = false" style="margin-bottom: 8px">
+              <template v-slot:prepend>
+                <v-icon color="blue" style="margin-right: 16px">{{ item.icon }}</v-icon>
+              </template>
+              <v-list-item-title style="font-weight: 500; font-size: 1.1rem"> {{ item.title }} </v-list-item-title>
+            </v-list-item>
+          </v-list>
+
+          <template v-slot:append>
+            <div style="padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1)">
+              <v-btn
+                href="https://wa.me/526221562893"
+                target="_blank"
+                color="green-darken-1"
+                block
+                prepend-icon="mdi-whatsapp"
+                style="margin-bottom: 12px"
+              >
+                WhatsApp
+              </v-btn>
+              <v-btn href="https://instagram.com/fernandoruelas03" target="_blank" color="pink-darken-1" block prepend-icon="mdi-instagram">
+                Instagram
+              </v-btn>
+            </div>
+          </template>
+        </v-navigation-drawer>
 
         <v-main style="background: #000">
           <!-- Hero minimalista -->
@@ -1571,7 +1610,6 @@
                   height="auto"
                   hide-delimiter-background
                   show-arrows="hover"
-                 
                   style="border-radius: 16px; overflow: hidden"
                 >
                   <!-- <template v-slot:prev="{ props }">
@@ -1667,8 +1705,6 @@
                     </div>
                   </v-carousel-item>
                 </v-carousel>
-
-               
               </div>
 
               <!-- CTA -->
@@ -1870,8 +1906,7 @@
             <v-row align="center">
               <v-col cols="12" md="4" class="text-center text-md-left">
                 <div style="display: flex; align-items: center; justify-content: center; justify-content: md-start">
-                  
-                  <img src="./assets/imgs/FRLogo.png" height="150" width="190">
+                  <img src="./assets/imgs/FRLogo.png" height="150" width="190" />
                   <!-- <div
                     style="
                       width: 40px;
@@ -2106,7 +2141,7 @@
                 peso: "-8kg de grasa",
                 imagen: "./assets/imgs/transformacion1.jpg",
               },
-             
+
               {
                 nombre: "",
                 descripcion: "Recomposición corporal",
@@ -2121,7 +2156,7 @@
                 peso: "-12kg de grasa",
                 imagen: "./assets/imgs/transformacion4.jpg",
               },
-               {
+              {
                 nombre: "",
                 descripcion: "Ganancia de masa muscular.",
                 tiempo: "16 semanas",
@@ -2141,7 +2176,15 @@
                 tiempo: "24 semanas",
                 peso: "-12kg de grasa",
                 imagen: "./assets/imgs/transformacion6.jpeg",
-              }
+              },
+            ],
+            drawer: false,
+            menuItems: [
+              { title: "Inicio", link: "#inicio", icon: "mdi-home" },
+              { title: "Sobre Mí", link: "#sobre-mi", icon: "mdi-account" },
+              { title: "Transformaciones", link: "#transformaciones", icon: "mdi-trophy" },
+              { title: "Planes", link: "#planes", icon: "mdi-clipboard-text" },
+              { title: "Contacto", link: "#contacto", icon: "mdi-phone" },
             ],
           };
         },
