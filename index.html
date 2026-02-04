@@ -204,13 +204,13 @@
                 @mouseleave="$event.target.style.opacity='0.8'"
                 >Sobre Mí</a
               >
-              <a
+              <!-- <a
                 href="#trayectoria"
                 style="text-decoration: none; color: #fff; font-weight: 500; opacity: 0.8; transition: opacity 0.3s"
                 @mouseover="$event.target.style.opacity='1'"
                 @mouseleave="$event.target.style.opacity='0.8'"
                 >Trayectoria</a
-              >
+              > -->
               <a
                 href="#planes"
                 style="text-decoration: none; color: #fff; font-weight: 500; opacity: 0.8; transition: opacity 0.3s"
@@ -310,7 +310,7 @@
           </section>
 
           <!-- Stats minimalista -->
-          <section style="background: #000; padding: 80px 0">
+          <section style="background: #141414; padding: 80px 0">
             <v-container>
               <v-row class="fade-in justify-center" :class="{ visible: statsVisible }">
                 <v-col cols="6" md="3" class="text-center" v-for="stat in stats" :key="stat.label">
@@ -322,7 +322,7 @@
           </section>
 
           <!-- Trayectoria minimalista -->
-          <section id="trayectoria" style="background: #0a0a0a; padding: 120px 0">
+          <!-- <section id="trayectoria" style="background: #0a0a0a; padding: 120px 0">
             <v-container>
               <div class="text-center mb-16 fade-in" :class="{ visible: trayectoriaVisible }">
                 <div class="decorative-line"></div>
@@ -331,7 +331,6 @@
                 </h2>
               </div>
 
-              <!-- Certificados minimalistas -->
               <div class="mb-16">
                 <h3 style="font-size: 1.5rem; font-weight: 600; text-align: center; margin-bottom: 48px; opacity: 0.9">Certificaciones</h3>
                 <v-row justify="center" class="fade-in" :class="{ visible: trayectoriaVisible }">
@@ -345,7 +344,6 @@
                 </v-row>
               </div>
 
-              <!-- Competencias minimalistas -->
               <div>
                 <h3 style="font-size: 1.5rem; font-weight: 600; text-align: center; margin-bottom: 48px; opacity: 0.9">Competencias</h3>
                 <v-row class="scale-in" :class="{ visible: trayectoriaVisible }">
@@ -374,24 +372,1045 @@
                 </v-row>
               </div>
             </v-container>
-          </section>
+          </section> -->
 
-          <!-- Ventajas minimalistas -->
-          <section style="background: #000; padding: 120px 0">
-            <v-container>
-              <div class="text-center mb-16 fade-in" :class="{ visible: ventajasVisible }">
+          <section
+            style="background: linear-gradient(180deg, #000000 0%, #0a1929 50%, #000000 100%); padding: 140px 0; position: relative; overflow: hidden"
+          >
+            <!-- Elementos decorativos de fondo -->
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: -20%;
+                width: 800px;
+                height: 800px;
+                background: radial-gradient(circle, rgba(33, 150, 243, 0.06) 0%, transparent 70%);
+                filter: blur(100px);
+              "
+            ></div>
+            <div
+              style="
+                position: absolute;
+                bottom: 0;
+                right: -20%;
+                width: 800px;
+                height: 800px;
+                background: radial-gradient(circle, rgba(33, 150, 243, 0.06) 0%, transparent 70%);
+                filter: blur(100px);
+              "
+            ></div>
+
+            <v-container style="position: relative; z-index: 1; max-width: 1400px">
+              <!-- Header de la sección -->
+              <div class="text-center mb-16 fade-in" :class="{ visible: ventajasVisible }" style="margin-bottom: 100px !important">
                 <div class="decorative-line"></div>
-                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 16px; letter-spacing: -1px">
+                <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; margin-bottom: 32px; letter-spacing: -2px">
                   <span class="gradient-text">¿Por Qué Elegirme?</span>
                 </h2>
-                <p style="opacity: 0.6; font-size: 1.1rem; max-width: 600px; margin: 0 auto">Tu aliado en el camino hacia tu mejor versión</p>
+                <p
+                  style="
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: clamp(1.1rem, 2vw, 1.4rem);
+                    max-width: 800px;
+                    margin: 0 auto;
+                    line-height: 1.8;
+                    font-weight: 300;
+                  "
+                >
+                  Un enfoque integral donde combino experiencia real de competencia, respaldo científico y un compromiso genuino con tu transformación
+                  sostenible
+                </p>
               </div>
-              <v-row class="fade-in" :class="{ visible: ventajasVisible }">
-                <v-col cols="12" sm="6" md="3" v-for="ventaja in ventajas" :key="ventaja.titulo">
-                  <div class="minimal-card text-center" style="padding: 40px 24px; border-radius: 16px; height: 100%">
-                    <v-icon size="40" color="blue" style="margin-bottom: 20px; opacity: 0.8">{{ ventaja.icono }}</v-icon>
-                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px">{{ ventaja.titulo }}</h3>
-                    <p style="opacity: 0.7; font-size: 0.95rem; line-height: 1.6; font-weight: 300">{{ ventaja.descripcion }}</p>
+
+              <!-- ============================================ -->
+              <!-- FILOSOFÍA PRINCIPAL - DESTACADA -->
+              <!-- ============================================ -->
+              <v-row justify="center" class="mb-16 fade-in" :class="{ visible: ventajasVisible }" style="margin-bottom: 120px !important">
+                <v-col cols="12" lg="11">
+                  <div
+                    style="
+                      background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(21, 101, 192, 0.04) 100%);
+                      border-radius: 32px;
+                      padding: 80px 60px;
+                      border: 2px solid rgba(33, 150, 243, 0.15);
+                      position: relative;
+                      overflow: hidden;
+                      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+                    "
+                  >
+                    <!-- Brillo decorativo -->
+                    <div
+                      style="
+                        position: absolute;
+                        top: -100px;
+                        right: -100px;
+                        width: 400px;
+                        height: 400px;
+                        background: radial-gradient(circle, rgba(33, 150, 243, 0.15) 0%, transparent 70%);
+                        filter: blur(60px);
+                      "
+                    ></div>
+
+                    <div style="position: relative; z-index: 1">
+                      <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 40px">
+                        <div
+                          style="
+                            background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-shadow: 0 10px 30px rgba(33, 150, 243, 0.4);
+                          "
+                        >
+                          <v-icon size="45" color="white">mdi-heart-pulse</v-icon>
+                        </div>
+                        <h3 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; letter-spacing: -1px; margin: 0">
+                          Mi Filosofía: Balance y Sostenibilidad
+                        </h3>
+                      </div>
+
+                      <div style="display: grid; gap: 32px">
+                        <p
+                          style="font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 2; color: rgba(255, 255, 255, 0.9); font-weight: 300; margin: 0"
+                        >
+                          <strong style="color: #64b5f6; font-weight: 600"
+                            >El fitness no debe ser una carga en tu vida, sino una parte natural de ella.</strong
+                          >
+                          Mi enfoque se centra en crear planes que se integren perfectamente con tu rutina diaria, para que puedas mantener resultados
+                          a largo plazo sin sacrificar tu vida social, familiar o profesional.
+                        </p>
+
+                        <p
+                          style="
+                            font-size: clamp(1.05rem, 2vw, 1.25rem);
+                            line-height: 2;
+                            color: rgba(255, 255, 255, 0.75);
+                            font-weight: 300;
+                            margin: 0;
+                          "
+                        >
+                          No busco clientes que sigan dietas extremas temporales.
+                          <strong style="color: #fff"
+                            >Busco personas comprometidas que quieran construir un estilo de vida saludable y sostenible.</strong
+                          >
+                        </p>
+
+                        <div
+                          style="
+                            background: rgba(33, 150, 243, 0.1);
+                            border-left: 4px solid #2196f3;
+                            padding: 28px 32px;
+                            border-radius: 12px;
+                            margin-top: 16px;
+                          "
+                        >
+                          <p
+                            style="
+                              font-size: clamp(1rem, 2vw, 1.2rem);
+                              color: #90caf9;
+                              font-weight: 500;
+                              margin: 0;
+                              font-style: italic;
+                              line-height: 1.8;
+                            "
+                          >
+                            <v-icon size="24" color="blue" style="margin-right: 12px">mdi-format-quote-open</v-icon>
+                            Se debe mantener una vida equilibrada y los planes que elaboro buscan ayudarte a encontrar ese equilibrio, para que esto
+                            se convierta en parte de tu día a día sin que tenga que ser difícil para ti.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+
+              <!-- ============================================ -->
+              <!-- VENTAJA 1: ENTRENAMIENTO PERSONALIZADO -->
+              <!-- ============================================ -->
+              <v-row align="center" class="mb-16 fade-in-left" :class="{ visible: ventajasVisible }" style="margin-bottom: 140px !important">
+                <v-col cols="12" md="6" class="pr-md-8">
+                  <div style="position: relative">
+                    <!-- Imagen con efecto -->
+                    <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5)">
+                      <div
+                        style="
+                          position: absolute;
+                          inset: -4px;
+                          background: linear-gradient(135deg, #2196f3, #1565c0);
+                          border-radius: 24px;
+                          opacity: 0.3;
+                          filter: blur(20px);
+                          z-index: -1;
+                        "
+                      ></div>
+                      <v-img
+                        src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop"
+                        height="500"
+                        cover
+                        style="border-radius: 24px"
+                      >
+                        <div
+                          style="
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(21, 101, 192, 0.2) 100%);
+                          "
+                        ></div>
+                      </v-img>
+                    </div>
+                    <!-- Badge flotante -->
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 30px;
+                        right: 30px;
+                        background: rgba(0, 0, 0, 0.85);
+                        backdrop-filter: blur(20px);
+                        padding: 20px 28px;
+                        border-radius: 16px;
+                        border: 1px solid rgba(33, 150, 243, 0.3);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      <p style="margin: 0; font-size: 0.85rem; color: #90caf9; font-weight: 600; text-transform: uppercase; letter-spacing: 1px">
+                        100% Personalizado
+                      </p>
+                    </div>
+                  </div>
+                </v-col>
+
+                <v-col cols="12" md="6" class="pl-md-8">
+                  <div style="padding: 40px 0">
+                    <!-- Icono y título -->
+                    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px">
+                      <div
+                        style="
+                          background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
+                          width: 70px;
+                          height: 70px;
+                          border-radius: 16px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          box-shadow: 0 10px 30px rgba(33, 150, 243, 0.4);
+                        "
+                      >
+                        <v-icon size="36" color="white">mdi-account-heart</v-icon>
+                      </div>
+                      <div>
+                        <h3
+                          style="
+                            font-size: clamp(1.8rem, 3vw, 2.5rem);
+                            font-weight: 800;
+                            color: #fff;
+                            line-height: 1.2;
+                            margin: 0 0 12px 0;
+                            letter-spacing: -1px;
+                          "
+                        >
+                          Entrenamiento 100% Personalizado
+                        </h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #2196f3, transparent); border-radius: 2px"></div>
+                      </div>
+                    </div>
+
+                    <!-- Contenido -->
+                    <div style="display: flex; flex-direction: column; gap: 28px">
+                      <p
+                        style="font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; color: rgba(255, 255, 255, 0.9); margin: 0; font-weight: 300"
+                      >
+                        <strong style="color: #64b5f6; font-weight: 600">Cada persona es completamente diferente:</strong> tu genética, metabolismo,
+                        horarios, experiencia previa y objetivos son únicos. Por eso, no creo en los planes genéricos que se copian y pegan.
+                      </p>
+
+                      <p
+                        style="
+                          font-size: clamp(1.05rem, 2vw, 1.2rem);
+                          line-height: 1.9;
+                          color: rgba(255, 255, 255, 0.75);
+                          margin: 0;
+                          font-weight: 300;
+                        "
+                      >
+                        A partir de un <strong style="color: #fff">formulario inicial detallado y evaluaciones continuas</strong>, diseño un plan
+                        específico para ti que considera tus limitaciones, disponibilidad de tiempo y equipo de entrenamiento.
+                        <span style="color: #90caf9">Tu plan evoluciona contigo.</span>
+                      </p>
+
+                      <!-- Feature boxes -->
+                      <div style="display: grid; gap: 16px; margin-top: 12px">
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(33, 150, 243, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #2196f3;
+                          "
+                        >
+                          <v-icon size="24" color="blue">mdi-check-circle</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Evaluación inicial completa</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(33, 150, 243, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #2196f3;
+                          "
+                        >
+                          <v-icon size="24" color="blue">mdi-check-circle</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Ajustes según tu progreso y respuesta</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(33, 150, 243, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #2196f3;
+                          "
+                        >
+                          <v-icon size="24" color="blue">mdi-check-circle</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Adaptación a tu estilo de vida y horarios reales</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+
+              <!-- ============================================ -->
+              <!-- VENTAJA 2: EXPERIENCIA REAL DE COMPETENCIA -->
+              <!-- ============================================ -->
+              <v-row align="center" class="mb-16 fade-in-right" :class="{ visible: ventajasVisible }" style="margin-bottom: 140px !important">
+                <v-col cols="12" md="6" :order="$vuetify.display.mdAndUp ? 2 : 1" class="pl-md-8">
+                  <div style="position: relative">
+                    <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5)">
+                      <div
+                        style="
+                          position: absolute;
+                          inset: -4px;
+                          background: linear-gradient(135deg, #2196f3, #1565c0);
+                          border-radius: 24px;
+                          opacity: 0.3;
+                          filter: blur(20px);
+                          z-index: -1;
+                        "
+                      ></div>
+                      <v-img src="./assets/imgs/fernando_ruelas_trofeos.png" height="500" cover style="border-radius: 24px">
+                        <div
+                          style="
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(21, 101, 192, 0.2) 100%);
+                          "
+                        ></div>
+                      </v-img>
+                    </div>
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 30px;
+                        left: 30px;
+                        background: rgba(0, 0, 0, 0.85);
+                        backdrop-filter: blur(20px);
+                        padding: 20px 28px;
+                        border-radius: 16px;
+                        border: 1px solid rgba(255, 193, 7, 0.3);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      <p style="margin: 0; font-size: 0.85rem; color: #ffd54f; font-weight: 600; text-transform: uppercase; letter-spacing: 1px">
+                        <v-icon size="18" color="amber" style="margin-right: 8px">mdi-trophy</v-icon>
+                        8+ Competencias
+                      </p>
+                    </div>
+                  </div>
+                </v-col>
+
+                <v-col cols="12" md="6" :order="$vuetify.display.mdAndUp ? 1 : 2" class="pr-md-8">
+                  <div style="padding: 40px 0">
+                    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px">
+                      <div
+                        style="
+                          background: linear-gradient(135deg, #ffb300 0%, #ff6f00 100%);
+                          width: 70px;
+                          height: 70px;
+                          border-radius: 16px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          box-shadow: 0 10px 30px rgba(255, 179, 0, 0.4);
+                        "
+                      >
+                        <v-icon size="36" color="white">mdi-trophy-variant</v-icon>
+                      </div>
+                      <div>
+                        <h3
+                          style="
+                            font-size: clamp(1.8rem, 3vw, 2.5rem);
+                            font-weight: 800;
+                            color: #fff;
+                            line-height: 1.2;
+                            margin: 0 0 12px 0;
+                            letter-spacing: -1px;
+                          "
+                        >
+                          Experiencia Real de Competencia
+                        </h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #ffb300, transparent); border-radius: 2px"></div>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 28px">
+                      <p
+                        style="font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; color: rgba(255, 255, 255, 0.9); margin: 0; font-weight: 300"
+                      >
+                        <strong style="color: #ffd54f; font-weight: 600">No solo lo estudié, lo viví en el escenario.</strong>
+                        He competido en más de 8 ocasiones, pasando por procesos de volumen extremo, cortes agresivos, peak weeks y todo lo que
+                        conlleva la preparación de alto nivel.
+                      </p>
+
+                      <p
+                        style="
+                          font-size: clamp(1.05rem, 2vw, 1.2rem);
+                          line-height: 1.9;
+                          color: rgba(255, 255, 255, 0.75);
+                          margin: 0;
+                          font-weight: 300;
+                        "
+                      >
+                        Cometí errores costosos que me enseñaron lecciones invaluables: desde sobreentrenamiento hasta errores dietéticos que me
+                        costaron semanas de progreso. <strong style="color: #fff">Mi misión es que tú evites esos errores</strong> y aceleres tu
+                        camino hacia tus metas, aprendiendo de mi experiencia práctica.
+                      </p>
+
+                      <div style="display: grid; gap: 16px; margin-top: 12px">
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(255, 179, 0, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #ffb300;
+                          "
+                        >
+                          <v-icon size="24" color="amber">mdi-medal</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Múltiples podios y campeonatos absolutos</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(255, 179, 0, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #ffb300;
+                          "
+                        >
+                          <v-icon size="24" color="amber">mdi-lightbulb-on</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Errores superados que ahora son tu ventaja</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(255, 179, 0, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #ffb300;
+                          "
+                        >
+                          <v-icon size="24" color="amber">mdi-dumbbell</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Estrategias probadas en competencia de alto nivel</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+
+              <!-- ============================================ -->
+              <!-- VENTAJA 3: RESPALDO CIENTÍFICO -->
+              <!-- ============================================ -->
+              <v-row align="center" class="mb-16 fade-in-left" :class="{ visible: ventajasVisible }" style="margin-bottom: 140px !important">
+                <v-col cols="12" md="6" class="pr-md-8">
+                  <div style="position: relative">
+                    <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5)">
+                      <div
+                        style="
+                          position: absolute;
+                          inset: -4px;
+                          background: linear-gradient(135deg, #2196f3, #1565c0);
+                          border-radius: 24px;
+                          opacity: 0.3;
+                          filter: blur(20px);
+                          z-index: -1;
+                        "
+                      ></div>
+                      <v-img src=".//assets/imgs/certificados.png" height="500" cover style="border-radius: 24px">
+                        <div
+                          style="
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(21, 101, 192, 0.2) 100%);
+                          "
+                        ></div>
+                      </v-img>
+                    </div>
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 30px;
+                        right: 30px;
+                        background: rgba(0, 0, 0, 0.85);
+                        backdrop-filter: blur(20px);
+                        padding: 20px 28px;
+                        border-radius: 16px;
+                        border: 1px solid rgba(76, 175, 80, 0.3);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      <p style="margin: 0; font-size: 0.85rem; color: #81c784; font-weight: 600; text-transform: uppercase; letter-spacing: 1px">
+                        <v-icon size="18" color="green" style="margin-right: 8px">mdi-certificate</v-icon>
+                        Certificado WABBA
+                      </p>
+                    </div>
+                  </div>
+                </v-col>
+
+                <v-col cols="12" md="6" class="pl-md-8">
+                  <div style="padding: 40px 0">
+                    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px">
+                      <div
+                        style="
+                          background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+                          width: 70px;
+                          height: 70px;
+                          border-radius: 16px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+                        "
+                      >
+                        <v-icon size="36" color="white">mdi-school</v-icon>
+                      </div>
+                      <div>
+                        <h3
+                          style="
+                            font-size: clamp(1.8rem, 3vw, 2.5rem);
+                            font-weight: 800;
+                            color: #fff;
+                            line-height: 1.2;
+                            margin: 0 0 12px 0;
+                            letter-spacing: -1px;
+                          "
+                        >
+                          Respaldo Científico y Certificaciones
+                        </h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #4caf50, transparent); border-radius: 2px"></div>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 28px">
+                      <p
+                        style="font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; color: rgba(255, 255, 255, 0.9); margin: 0; font-weight: 300"
+                      >
+                        Cuento con
+                        <strong style="color: #81c784; font-weight: 600"
+                          >certificaciones internacionales en nutrición deportiva y nutrición aplicada al fisicoculturismo</strong
+                        >, respaldadas por FISICOCULTURISMO MEXICO S.C afiliado a WABBA INTERNATIONAL. Combino este conocimiento académico con años de
+                        estudio continuo y actualización constante.
+                      </p>
+
+                      <p
+                        style="
+                          font-size: clamp(1.05rem, 2vw, 1.2rem);
+                          line-height: 1.9;
+                          color: rgba(255, 255, 255, 0.75);
+                          margin: 0;
+                          font-weight: 300;
+                        "
+                      >
+                        No me baso en tendencias ni modas pasajeras.
+                        <strong style="color: #fff">Cada recomendación que te doy está fundamentada en evidencia científica</strong>, adaptada a la
+                        práctica real y probada en resultados medibles. Tu progreso se basa en hechos, no en suposiciones.
+                      </p>
+
+                      <div style="display: grid; gap: 16px; margin-top: 12px">
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(76, 175, 80, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #4caf50;
+                          "
+                        >
+                          <v-icon size="24" color="green">mdi-certificate-outline</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400"
+                            >Certificaciones internacionales vigentes y actualizadas</span
+                          >
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(76, 175, 80, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #4caf50;
+                          "
+                        >
+                          <v-icon size="24" color="green">mdi-book-open-variant</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Estudio continuo de las últimas investigaciones</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(76, 175, 80, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #4caf50;
+                          "
+                        >
+                          <v-icon size="24" color="green">mdi-flask</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Métodos basados en evidencia científica sólida</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+
+              <!-- ============================================ -->
+              <!-- VENTAJA 4: ACOMPAÑAMIENTO CONSTANTE -->
+              <!-- ============================================ -->
+              <v-row align="center" class="mb-16 fade-in-right" :class="{ visible: ventajasVisible }" style="margin-bottom: 140px !important">
+                <!-- <v-col cols="12" md="6" :order="$vuetify.display.mdAndUp ? 2 : 1" class="pl-md-8">
+                  <div style="position: relative">
+                    <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5)">
+                      <div
+                        style="
+                          position: absolute;
+                          inset: -4px;
+                          background: linear-gradient(135deg, #2196f3, #1565c0);
+                          border-radius: 24px;
+                          opacity: 0.3;
+                          filter: blur(20px);
+                          z-index: -1;
+                        "
+                      ></div>
+                      <v-img
+                        src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop"
+                        height="500"
+                        cover
+                        style="border-radius: 24px"
+                      >
+                        <div
+                          style="
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(21, 101, 192, 0.2) 100%);
+                          "
+                        ></div>
+                      </v-img>
+                    </div>
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 30px;
+                        left: 30px;
+                        background: rgba(0, 0, 0, 0.85);
+                        backdrop-filter: blur(20px);
+                        padding: 20px 28px;
+                        border-radius: 16px;
+                        border: 1px solid rgba(156, 39, 176, 0.3);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      <p style="margin: 0; font-size: 0.85rem; color: #ce93d8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px">
+                        <v-icon size="18" color="purple" style="margin-right: 8px">mdi-chat</v-icon>
+                        Soporte 24/7
+                      </p>
+                    </div>
+                  </div>
+                </v-col> -->
+
+                <v-col cols="12" md="12" :order="$vuetify.display.mdAndUp ? 1 : 2" class="pr-md-8">
+                  <div style="padding: 40px 0">
+                    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px">
+                      <div
+                        style="
+                          background: linear-gradient(135deg, #9c27b0 0%, #6a1b9a 100%);
+                          width: 70px;
+                          height: 70px;
+                          border-radius: 16px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          box-shadow: 0 10px 30px rgba(156, 39, 176, 0.4);
+                        "
+                      >
+                        <v-icon size="36" color="white">mdi-message-text</v-icon>
+                      </div>
+                      <div>
+                        <h3
+                          style="
+                            font-size: clamp(1.8rem, 3vw, 2.5rem);
+                            font-weight: 800;
+                            color: #fff;
+                            line-height: 1.2;
+                            margin: 0 0 12px 0;
+                            letter-spacing: -1px;
+                          "
+                        >
+                          Acompañamiento en Cada Paso
+                        </h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #9c27b0, transparent); border-radius: 2px"></div>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 28px">
+                      <p
+                        style="font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; color: rgba(255, 255, 255, 0.9); margin: 0; font-weight: 300"
+                      >
+                        <strong style="color: #ce93d8; font-weight: 600">No te dejo solo con un plan esperando milagros.</strong> Estaré contigo
+                        constantemente para resolver dudas, ajustar tu programa según tu progreso, motivarte en los momentos difíciles y celebrar tus
+                        logros.
+                      </p>
+
+                      <p
+                        style="
+                          font-size: clamp(1.05rem, 2vw, 1.2rem);
+                          line-height: 1.9;
+                          color: rgba(255, 255, 255, 0.75);
+                          margin: 0;
+                          font-weight: 300;
+                        "
+                      >
+                        A través de
+                        <strong style="color: #fff">seguimiento continuo, formularios de progreso y evaluaciones periódicas</strong>, monitoreo cada
+                        aspecto de tu transformación. Si algo no funciona, lo ajustamos de inmediato. Si algo está funcionando bien, lo optimizamos
+                        aún más.
+                      </p>
+
+                      <div style="display: grid; gap: 16px; margin-top: 12px">
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(156, 39, 176, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #9c27b0;
+                          "
+                        >
+                          <v-icon size="24" color="purple">mdi-clock-fast</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Respuesta rápida a tus consultas</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(156, 39, 176, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #9c27b0;
+                          "
+                        >
+                          <v-icon size="24" color="purple">mdi-chart-timeline-variant</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Seguimiento detallado de tu progreso</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(156, 39, 176, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #9c27b0;
+                          "
+                        >
+                          <v-icon size="24" color="purple">mdi-tune</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Ajustes oportunos cuando los necesites</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+
+              <!-- ============================================ -->
+              <!-- VENTAJA 5: RESULTADOS SOSTENIBLES -->
+              <!-- ============================================ -->
+              <v-row align="center" class="mb-16 fade-in-left" :class="{ visible: ventajasVisible }" style="margin-bottom: 100px !important">
+                <v-col cols="12" md="6" class="pr-md-8">
+                  <div style="position: relative">
+                    <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5)">
+                      <div
+                        style="
+                          position: absolute;
+                          inset: -4px;
+                          background: linear-gradient(135deg, #2196f3, #1565c0);
+                          border-radius: 24px;
+                          opacity: 0.3;
+                          filter: blur(20px);
+                          z-index: -1;
+                        "
+                      ></div>
+                      <v-img src="./assets/imgs/fernando_ruelas_comida.jpeg" height="500" cover style="border-radius: 24px">
+                        <div
+                          style="
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(21, 101, 192, 0.2) 100%);
+                          "
+                        ></div>
+                      </v-img>
+                    </div>
+                    <div
+                      style="
+                        position: absolute;
+                        bottom: 30px;
+
+                        background: rgba(0, 0, 0, 0.85);
+                        backdrop-filter: blur(20px);
+                        padding: 20px 28px;
+                        border-radius: 16px;
+                        border: 1px solid rgba(33, 150, 243, 0.3);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      <p style="margin: 0; font-size: 0.85rem; color: #64b5f6; font-weight: 600; text-transform: uppercase; letter-spacing: 1px">
+                        <v-icon size="18" color="blue" style="margin-right: 8px">mdi-infinity</v-icon>
+                        Largo Plazo
+                      </p>
+                    </div>
+                  </div>
+                </v-col>
+
+                <v-col cols="12" md="6" class="pl-md-8">
+                  <div style="padding: 40px 0">
+                    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px">
+                      <div
+                        style="
+                          background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
+                          width: 70px;
+                          height: 70px;
+                          border-radius: 16px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-shrink: 0;
+                          box-shadow: 0 10px 30px rgba(33, 150, 243, 0.4);
+                        "
+                      >
+                        <v-icon size="36" color="white">mdi-trending-up</v-icon>
+                      </div>
+                      <div>
+                        <h3
+                          style="
+                            font-size: clamp(1.8rem, 3vw, 2.5rem);
+                            font-weight: 800;
+                            color: #fff;
+                            line-height: 1.2;
+                            margin: 0 0 12px 0;
+                            letter-spacing: -1px;
+                          "
+                        >
+                          Enfoque en Resultados Sostenibles
+                        </h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #2196f3, transparent); border-radius: 2px"></div>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 28px">
+                      <p
+                        style="font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.9; color: rgba(255, 255, 255, 0.9); margin: 0; font-weight: 300"
+                      >
+                        Mi objetivo
+                        <strong style="color: #64b5f6; font-weight: 600">no es que bajes 10 kilos en un mes para recuperarlos al siguiente.</strong>
+                        Busco transformaciones reales y duraderas que puedas mantener a largo plazo sin sufrir en el proceso.
+                      </p>
+
+                      <p
+                        style="
+                          font-size: clamp(1.05rem, 2vw, 1.2rem);
+                          line-height: 1.9;
+                          color: rgba(255, 255, 255, 0.75);
+                          margin: 0;
+                          font-weight: 300;
+                        "
+                      >
+                        Creo en la construcción de hábitos saludables, no en restricciones extremas.
+                        <strong style="color: #fff">Te enseño a entender tu cuerpo</strong>, a tomar decisiones informadas sobre tu alimentación y
+                        entrenamiento, y a crear un estilo de vida que puedas mantener.
+                      </p>
+
+                      <div style="display: grid; gap: 16px; margin-top: 12px">
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(33, 150, 243, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #2196f3;
+                          "
+                        >
+                          <v-icon size="24" color="blue">mdi-target</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400"
+                            >Educación continua para mantener resultados de por vida</span
+                          >
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(33, 150, 243, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #2196f3;
+                          "
+                        >
+                          <v-icon size="24" color="blue">mdi-food-apple</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Hábitos saludables sin restricciones extremas</span>
+                        </div>
+                        <div
+                          style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            background: rgba(33, 150, 243, 0.06);
+                            padding: 18px 24px;
+                            border-radius: 12px;
+                            border-left: 3px solid #2196f3;
+                          "
+                        >
+                          <v-icon size="24" color="blue">mdi-calendar-check</v-icon>
+                          <span style="font-size: 1.05rem; color: #e0e0e0; font-weight: 400">Transformación real</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+
+              <!-- ============================================ -->
+              <!-- CTA FINAL IMPACTANTE -->
+              <!-- ============================================ -->
+              <v-row justify="center" class="fade-in scale-in" :class="{ visible: ventajasVisible }">
+                <v-col cols="12" lg="10">
+                  <div
+                    style="
+                      background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(21, 101, 192, 0.08) 100%);
+                      border-radius: 32px;
+                      padding: 80px 60px;
+                      text-align: center;
+                      border: 2px solid rgba(33, 150, 243, 0.2);
+                      position: relative;
+                      overflow: hidden;
+                      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+                    "
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        top: -100px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 500px;
+                        height: 500px;
+                        background: radial-gradient(circle, rgba(33, 150, 243, 0.2) 0%, transparent 70%);
+                        filter: blur(80px);
+                      "
+                    ></div>
+
+                    <div style="position: relative; z-index: 1">
+                      <v-icon size="60" color="blue" style="margin-bottom: 32px; opacity: 0.9">mdi-rocket-launch</v-icon>
+
+                      <h3
+                        style="
+                          font-size: clamp(2rem, 4vw, 3.2rem);
+                          font-weight: 800;
+                          margin-bottom: 24px;
+                          color: #fff;
+                          letter-spacing: -1px;
+                          line-height: 1.2;
+                        "
+                      >
+                        ¿Listo para Comenzar tu Transformación?
+                      </h3>
+
+                      <p
+                        style="
+                          font-size: clamp(1.15rem, 2vw, 1.5rem);
+                          color: rgba(255, 255, 255, 0.8);
+                          margin-bottom: 16px;
+                          line-height: 1.7;
+                          font-weight: 300;
+                          max-width: 800px;
+                          margin-left: auto;
+                          margin-right: auto;
+                        "
+                      >
+                        No importa dónde estés ahora, lo importante es hacia dónde quieres ir.
+                      </p>
+
+                      <p style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: #64b5f6; margin-bottom: 48px; font-weight: 600; font-style: italic">
+                        Yo te llevaré ahí con un plan diseñado específicamente para ti.
+                      </p>
+
+                      <v-btn
+                        href="#planes"
+                        size="x-large"
+                        color="blue"
+                        class="minimal-btn"
+                        style="
+                          text-transform: none;
+                          font-weight: 700;
+                          letter-spacing: 0;
+                          font-size: 1.15rem;
+                          box-shadow: 0 15px 40px rgba(33, 150, 243, 0.4);
+                        "
+                      >
+                        <v-icon left size="28">mdi-arrow-right-circle</v-icon>
+                        Ver Planes y Comenzar Ahora
+                      </v-btn>
+                    </div>
                   </div>
                 </v-col>
               </v-row>
@@ -523,19 +1542,159 @@
                   </div>
                 </v-col>
               </v-row>
-
-              <!-- Nota -->
-              <!-- <v-row justify="center" style="margin-top: 48px;" class="fade-in" :class="{ visible: planesVisible }">
-              <v-col cols="12" md="8">
-                <div style="background: rgba(33, 150, 243, 0.05); border-left: 3px solid #2196F3; padding: 24px; border-radius: 8px;">
-                  <p style="margin-bottom: 8px; font-weight: 600;">Importante:</p>
-                  <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 8px;">Todos los planes incluyen formularios iniciales, seguimiento constante y revisiones periódicas.</p>
-                  <p style="opacity: 0.6; font-size: 0.9rem;">El plan de Preparación para Competencia requiere anticipo de 3 meses.</p>
-                </div>
-              </v-col>
-            </v-row> -->
             </v-container>
           </section>
+
+          <!-- Transformaciones de Clientes -->
+          <section id="transformaciones" style="background: #0a0a0a; padding: 120px 0; overflow: hidden">
+            <v-container>
+              <div class="text-center mb-16 fade-in" :class="{ visible: transformacionesVisible }">
+                <div class="decorative-line"></div>
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 16px; letter-spacing: -1px">
+                  <span class="gradient-text">Transformaciones Reales</span>
+                </h2>
+                <p style="opacity: 0.6; font-size: 1.1rem">Resultados que hablan por sí mismos</p>
+              </div>
+
+              <!-- Carrusel de Vuetify -->
+              <div class="fade-in" :class="{ visible: transformacionesVisible }">
+                <v-carousel
+                  v-model="currentSlide"
+                  height="auto"
+                  hide-delimiter-background
+                  show-arrows="hover"
+                  cycle
+                  interval="5000"
+                  style="border-radius: 16px; overflow: hidden"
+                >
+                  <template v-slot:prev="{ props }">
+                    <v-btn
+                      icon
+                      size="large"
+                      @click="props.onClick"
+                      style="background: rgba(33, 150, 243, 0.3); backdrop-filter: blur(10px); margin-left: 16px"
+                    >
+                      <v-icon color="white" size="32">mdi-chevron-left</v-icon>
+                    </v-btn>
+                  </template>
+
+                  <template v-slot:next="{ props }">
+                    <v-btn
+                      icon
+                      size="large"
+                      @click="props.onClick"
+                      style="background: rgba(33, 150, 243, 0.3); backdrop-filter: blur(10px); margin-right: 16px"
+                    >
+                      <v-icon color="white" size="32">mdi-chevron-right</v-icon>
+                    </v-btn>
+                  </template>
+
+                  <v-carousel-item v-for="(transformacion, index) in transformaciones" :key="index" :src="transformacion.imagen" cover>
+                    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end">
+                      <!-- Badge "Transformación" -->
+                      <!-- <div
+                        style="
+                          position: absolute;
+                          top: 24px;
+                          right: 24px;
+                          background: rgba(33, 150, 243, 0.9);
+                          backdrop-filter: blur(10px);
+                          padding: 12px 24px;
+                          border-radius: 10px;
+                          box-shadow: 0 4px 20px rgba(33, 150, 243, 0.4);
+                        "
+                      >
+                        <v-icon size="20" color="white" style="margin-right: 8px">mdi-chart-line</v-icon>
+                        <span style="font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px"> Transformación </span>
+                      </div> -->
+
+                      <!-- Info del Cliente -->
+                      <div
+                        style="
+                          background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+                          padding: 100px 32px 40px;
+                        "
+                      >
+                        <v-container>
+                          <v-row justify="center">
+                            <v-col cols="12" md="10" lg="8">
+                              <!-- <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; text-align: center">{{ transformacion.nombre }}</h3> -->
+                              <p style="opacity: 0.9; margin-bottom: 24px; font-size: 1.1rem; line-height: 1.6; text-align: center">
+                                {{ transformacion.descripcion }}
+                              </p>
+                              <!-- <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center">
+                                <div
+                                  style="
+                                    background: rgba(33, 150, 243, 0.2);
+                                    border: 1px solid rgba(33, 150, 243, 0.4);
+                                    padding: 12px 24px;
+                                    border-radius: 10px;
+                                    backdrop-filter: blur(10px);
+                                    display: flex;
+                                    align-items: center;
+                                  "
+                                >
+                                  <v-icon size="20" color="blue" style="margin-right: 10px">mdi-calendar-clock</v-icon>
+                                  <span style="font-size: 1rem; font-weight: 600">{{ transformacion.tiempo }}</span>
+                                </div>
+                                <div
+                                  v-if="transformacion.peso"
+                                  style="
+                                    background: rgba(33, 150, 243, 0.2);
+                                    border: 1px solid rgba(33, 150, 243, 0.4);
+                                    padding: 12px 24px;
+                                    border-radius: 10px;
+                                    backdrop-filter: blur(10px);
+                                    display: flex;
+                                    align-items: center;
+                                  "
+                                >
+                                  <v-icon size="20" color="blue" style="margin-right: 10px">mdi-trending-up</v-icon>
+                                  <span style="font-size: 1rem; font-weight: 600">{{ transformacion.peso }}</span>
+                                </div>
+                              </div> -->
+                            </v-col>
+                          </v-row>
+                        </v-container>
+                      </div>
+                    </div>
+                  </v-carousel-item>
+                </v-carousel>
+
+               
+              </div>
+
+              <!-- CTA -->
+              <v-row justify="center" style="margin-top: 64px" class="fade-in" :class="{ visible: transformacionesVisible }">
+                <v-col cols="12" md="6">
+                  <div
+                    style="
+                      background: rgba(33, 150, 243, 0.1);
+                      border: 1px solid rgba(33, 150, 243, 0.2);
+                      border-radius: 16px;
+                      padding: 40px;
+                      text-align: center;
+                    "
+                  >
+                    <v-icon size="48" color="blue" style="margin-bottom: 16px; opacity: 0.8">mdi-trophy-variant</v-icon>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px">¿Listo para tu propia transformación?</h3>
+                    <p style="color: #b0b0b0; margin-bottom: 24px; font-size: 1rem">Únete a las personas que ya están logrando sus objetivos</p>
+                    <v-btn
+                      href="#planes"
+                      color="blue"
+                      size="x-large"
+                      class="minimal-btn"
+                      style="text-transform: none; font-weight: 600; letter-spacing: 0"
+                    >
+                      <v-icon left>mdi-rocket-launch</v-icon>
+                      Comenzar Ahora
+                    </v-btn>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </section>
+
           <section id="faq" style="background: #000; padding: 120px 0">
             <v-container>
               <div class="text-center mb-16 fade-in" :class="{ visible: faqVisible }">
@@ -643,38 +1802,6 @@
                 </h2>
                 <p style="opacity: 0.6; font-size: 1.1rem">Da el primer paso hacia tu transformación</p>
               </div>
-
-              <!-- Botones de contacto -->
-              <!-- <v-row class="mb-16 fade-in" :class="{ visible: contactoVisible }">
-              <v-col cols="12" md="6">
-                <v-btn 
-                  href="https://wa.me/526221562893" 
-                  target="_blank"
-                  color="green-darken-1" 
-                  block 
-                  size="x-large"
-                  class="minimal-btn"
-                  style="text-transform: none; font-weight: 600; letter-spacing: 0; padding: 20px;"
-                >
-                  <v-icon left>mdi-whatsapp</v-icon>
-                  WhatsApp
-                </v-btn>
-              </v-col>
-              <v-col cols="12" md="6">
-                <v-btn 
-                  href="https://instagram.com/fernandoruelas03" 
-                  target="_blank"
-                  color="pink-darken-1" 
-                  block 
-                  size="x-large"
-                  class="minimal-btn"
-                  style="text-transform: none; font-weight: 600; letter-spacing: 0; padding: 20px;"
-                >
-                  <v-icon left>mdi-instagram</v-icon>
-                  Instagram
-                </v-btn>
-              </v-col>
-            </v-row> -->
 
               <!-- Formulario -->
               <v-row justify="center" class="scale-in" :class="{ visible: contactoVisible }">
@@ -937,7 +2064,7 @@
                 respuesta:
                   "Por supuesto. Si sientes que necesitas más o menos acompañamiento, podemos ajustar tu plan. Mi prioridad es que obtengas el nivel de soporte adecuado para alcanzar tus objetivos de la manera más efectiva.",
               },
-            
+
               {
                 pregunta: "¿Los planes incluyen suplementación obligatoria?",
                 respuesta:
@@ -958,6 +2085,47 @@
             //     "Apoyo en tarima"
             //   ]
             // }
+            // En el objeto data(), agrega:
+            // En el objeto data():
+            transformacionesVisible: true,
+            currentSlide: 0,
+            transformaciones: [
+              {
+                nombre: "",
+                descripcion: "Ganancia de masa muscular.",
+                tiempo: "12 semanas",
+                peso: "-8kg de grasa",
+                imagen: "./assets/imgs/transformacion1.jpg",
+              },
+              {
+                nombre: "",
+                descripcion: "Ganancia de masa muscular.",
+                tiempo: "16 semanas",
+                peso: "+6kg de músculo",
+                imagen: "./assets/imgs/transformacion2.jpg",
+              },
+              {
+                nombre: "",
+                descripcion: "Recomposición corporal",
+                tiempo: "20 semanas",
+                peso: "-10kg / +4kg músculo",
+                imagen: "./assets/imgs/transformacion3.jpg",
+              },
+              {
+                nombre: "",
+                descripcion: "Disminución de porcentaje de grasa",
+                tiempo: "24 semanas",
+                peso: "-12kg de grasa",
+                imagen: "./assets/imgs/transformacion4.jpg",
+              },
+              {
+                nombre: "",
+                descripcion: "perdida de peso",
+                tiempo: "24 semanas",
+                peso: "-12kg de grasa",
+                imagen: "./assets/imgs/transformacion5.jpg",
+              },
+            ],
           };
         },
         computed: {
@@ -1021,6 +2189,14 @@
           });
         },
         methods: {
+          // En methods, agrega:
+          // Métodos (igual que antes):
+          nextSlide() {
+            this.currentSlide = (this.currentSlide + 1) % this.transformaciones.length;
+          },
+          prevSlide() {
+            this.currentSlide = this.currentSlide === 0 ? this.transformaciones.length - 1 : this.currentSlide - 1;
+          },
           toggleFAQ(index) {
             this.openFAQIndex = this.openFAQIndex === index ? null : index;
           },
