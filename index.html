@@ -1574,7 +1574,7 @@
                  
                   style="border-radius: 16px; overflow: hidden"
                 >
-                  <template v-slot:prev="{ props }">
+                  <!-- <template v-slot:prev="{ props }">
                     <v-btn
                       icon
                       size="large"
@@ -1594,7 +1594,7 @@
                     >
                       <v-icon color="white" size="32">mdi-chevron-right</v-icon>
                     </v-btn>
-                  </template>
+                  </template> -->
 
                   <v-carousel-item v-for="(transformacion, index) in transformaciones" :key="index" :src="transformacion.imagen" cover>
                     <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end">
@@ -1626,9 +1626,9 @@
                           <v-row justify="center">
                             <v-col cols="12" md="10" lg="8">
                               <!-- <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; text-align: center">{{ transformacion.nombre }}</h3> -->
-                              <p style="opacity: 0.9; margin-bottom: 24px; font-size: 1.1rem; line-height: 1.6; text-align: center">
+                              <!-- <p style="opacity: 0.9; margin-bottom: 24px; font-size: 1.1rem; line-height: 1.6; text-align: center">
                                 {{ transformacion.descripcion }}
-                              </p>
+                              </p> -->
                               <!-- <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center">
                                 <div
                                   style="
