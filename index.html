@@ -1537,6 +1537,63 @@
                 </v-col>
               </v-row>
 
+
+
+              <!-- Plan Competencia -->
+              <v-row justify="center" class="scale-in" :class="{ visible: planesVisible }">
+                <v-col cols="12" md="6">
+                  <div class="minimal-card" style="padding: 40px; border-radius: 16px; border: 2px solid #64b5f6; position: relative">
+                    <div
+                      style="
+                        position: absolute;
+                        top: -12px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: linear-gradient(135deg, #64b5f6, #2196f3);
+                        padding: 6px 20px;
+                        border-radius: 20px;
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                      "
+                    >
+                      Competidores
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; text-align: center">{{ planCompetencia.nombre }}</h3>
+                    <div style="text-align: center; margin-bottom: 32px">
+                      <div style="font-size: 3rem; font-weight: 800; color: #64b5f6; line-height: 1">
+                        ${{ planCompetencia.precio }}
+                        <span style="font-size: 1.2rem; opacity: 0.6; font-weight: 400">/mes</span>
+                      </div>
+                      <div style="margin-top: 8px; opacity: 0.5; font-size: 0.9rem">${{ planCompetencia.precioTrimestral }} / 3 meses</div>
+                    </div>
+                    <div style="margin-bottom: 32px">
+                      <div
+                        v-for="car in planCompetencia.caracteristicas"
+                        :key="car"
+                        style="display: flex; align-items: flex-start; margin-bottom: 12px"
+                      >
+                        <v-icon color="light-blue-lighten-1" size="18" style="margin-right: 12px; margin-top: 2px; flex-shrink: 0">mdi-check</v-icon>
+                        <span style="opacity: 0.8; font-size: 0.95rem; line-height: 1.5">{{ car }}</span>
+                      </div>
+                    </div>
+                    <v-btn
+                      color="light-blue-lighten-1"
+                      variant="flat"
+                      block
+                      size="large"
+                      href="#contacto"
+                      class="minimal-btn"
+                      style="text-transform: none; font-weight: 600; letter-spacing: 0"
+                    >
+                      Comenzar
+                    </v-btn>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </section>
               <!-- Sección: Proceso de Pago -->
 <section id="comoComenzamos" style="background: #000; padding: 100px 0; position: relative; overflow: hidden;">
   <!-- Fondo decorativo -->
@@ -1725,63 +1782,6 @@
 
   </v-container>
 </section>
-
-              <!-- Plan Competencia -->
-              <v-row justify="center" class="scale-in" :class="{ visible: planesVisible }">
-                <v-col cols="12" md="6">
-                  <div class="minimal-card" style="padding: 40px; border-radius: 16px; border: 2px solid #64b5f6; position: relative">
-                    <div
-                      style="
-                        position: absolute;
-                        top: -12px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        background: linear-gradient(135deg, #64b5f6, #2196f3);
-                        padding: 6px 20px;
-                        border-radius: 20px;
-                        font-size: 0.75rem;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        letter-spacing: 0.5px;
-                      "
-                    >
-                      Competidores
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; text-align: center">{{ planCompetencia.nombre }}</h3>
-                    <div style="text-align: center; margin-bottom: 32px">
-                      <div style="font-size: 3rem; font-weight: 800; color: #64b5f6; line-height: 1">
-                        ${{ planCompetencia.precio }}
-                        <span style="font-size: 1.2rem; opacity: 0.6; font-weight: 400">/mes</span>
-                      </div>
-                      <div style="margin-top: 8px; opacity: 0.5; font-size: 0.9rem">${{ planCompetencia.precioTrimestral }} / 3 meses</div>
-                    </div>
-                    <div style="margin-bottom: 32px">
-                      <div
-                        v-for="car in planCompetencia.caracteristicas"
-                        :key="car"
-                        style="display: flex; align-items: flex-start; margin-bottom: 12px"
-                      >
-                        <v-icon color="light-blue-lighten-1" size="18" style="margin-right: 12px; margin-top: 2px; flex-shrink: 0">mdi-check</v-icon>
-                        <span style="opacity: 0.8; font-size: 0.95rem; line-height: 1.5">{{ car }}</span>
-                      </div>
-                    </div>
-                    <v-btn
-                      color="light-blue-lighten-1"
-                      variant="flat"
-                      block
-                      size="large"
-                      href="#contacto"
-                      class="minimal-btn"
-                      style="text-transform: none; font-weight: 600; letter-spacing: 0"
-                    >
-                      Comenzar
-                    </v-btn>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-container>
-          </section>
-
           <!-- Transformaciones de Clientes -->
           <section id="transformaciones" style="background: #0a0a0a; padding: 120px 0; overflow: hidden">
             <v-container>
