@@ -1507,6 +1507,27 @@
                     </div>
                     <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; text-align: center">{{ plan.nombre }}</h3>
                     <div style="text-align: center; margin-bottom: 32px">
+                       <div v-if="plan.precioAnterior" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 4px">
+                        <span style="
+                          font-size: 1.1rem;
+                          font-weight: 600;
+                          color: #ef5350;
+                          text-decoration: line-through;
+                          text-decoration-color: #ef5350;
+                          text-decoration-thickness: 2px;
+                          opacity: 0.85;
+                        ">${{ plan.precioAnterior }}</span>
+                        <span style="
+                          background: linear-gradient(135deg, #ef5350, #c62828);
+                          color: #fff;
+                          font-size: 0.65rem;
+                          font-weight: 700;
+                          padding: 2px 8px;
+                          border-radius: 20px;
+                          text-transform: uppercase;
+                          letter-spacing: 0.5px;
+                        ">Promo</span>
+                      </div>
                       <div style="font-size: 3rem; font-weight: 800; color: #2196f3; line-height: 1">
                         ${{ plan.precio }}
                         <span style="font-size: 1.2rem; opacity: 0.6; font-weight: 400">/mes</span>
@@ -2218,8 +2239,10 @@
             planesRegulares: [
               {
                 nombre: "Estudiante",
+                  precioAnterior: 1000,
                 precio: 850,
                 precioTrimestral: 2250,
+             
                 popular: false,
                 caracteristicas: [
                   "Formulario inicial completo",
@@ -2234,6 +2257,7 @@
               {
                 nombre: "Estándar",
                 precio: 950,
+                   precioAnterior: 1200,
                 precioTrimestral: 2650,
                 popular: true,
                 caracteristicas: ["Todo lo del plan Estudiante"],
@@ -2242,6 +2266,7 @@
               {
                 nombre: "Plan de Alimentación",
                 precio: 550,
+                precioAnterior: 600,
                 precioTrimestral: null,
                 popular: false,
                 caracteristicas: ["Formulario de hábitos", "Plan nutricional personalizado", "Adaptado a tu vida", "Plan de suplementación"],
@@ -2250,6 +2275,7 @@
               {
                 nombre: "Plan de Entrenamiento",
                 precio: 550,
+                
                 precioTrimestral: null,
                 popular: false,
                 caracteristicas: ["Evaluacion inicial", "Plan de entrenamiento personalizado", "Mejora continua", "Seguimiento"],
@@ -2259,6 +2285,7 @@
                 nombre: "Preparación Competencia",
                 popular: true,
                 precio: 1150,
+                precioAnterior: 1300,
                 precioTrimestral: 3450,
                 caracteristicas: [
                   "Anticipo 3 meses requerido",
