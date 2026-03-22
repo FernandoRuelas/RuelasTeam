@@ -1,0 +1,147 @@
+.v-application h1,
+.v-application h2,
+.v-application h3,
+.v-application h4,
+.v-application h5,
+.v-application h6,
+.v-application p,
+.v-application span:not(.mdi),
+.v-application a,
+.v-application div {
+  font-family: "Inter", sans-serif;
+}
+[v-cloak] {
+  display: none;
+}
+
+.hero-section {
+  background: linear-gradient(180deg, #000000 0%, #0a1929 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.minimal-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.minimal-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(33, 150, 243, 0.3);
+  transform: translateY(-5px);
+}
+
+.gradient-text {
+  color: #64b5f6;
+}
+
+.decorative-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2196f3, transparent);
+  margin: 0 auto 2rem;
+}
+
+.minimal-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.minimal-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.minimal-btn:hover::before {
+  left: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.minimal-navbar {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
