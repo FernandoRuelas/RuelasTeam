@@ -1155,6 +1155,7 @@ export default {
         { src: '/assets/imgs/app2.jpg', alt: 'Videos de ejemplo' },
         { src: '/assets/imgs/app3.jpg', alt: 'Plan nutricional ' },
       ],
+      
       ventajas: [
         {
           icono: "mdi-trending-up",
