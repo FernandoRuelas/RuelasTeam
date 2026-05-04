@@ -110,7 +110,7 @@ export default {
         {
           nombre: "Estudiante",
           precioAnterior: 1000,
-          precio: 950,
+          precio: 800,
           precioTrimestral: 2500,
           popular: false,
           caracteristicas: [
@@ -126,7 +126,7 @@ export default {
         },
         {
           nombre: "Estándar",
-          precio: 1100,
+          precio: 900,
           precioAnterior: 1200,
           precioTrimestral: 3000,
           popular: true,
